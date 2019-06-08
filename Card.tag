@@ -5,9 +5,16 @@
 			height:300px;
 			background-color: #fff;
 			display: flex;
-
+			flex-direction: column;
+			flex:1;
+			
 		}
 
+		.cardSpacerSection{
+			flex:1;
+			width:100%;
+			height:50vh;
+		}
 		
 		
 		.card .timelineLink {
@@ -27,6 +34,7 @@
 			display: flex;
 			border: 2px solid green;
 			padding:20px;
+
 		}
 
 		.card .contents .dateContainer{
@@ -44,12 +52,20 @@
 		.linkSpacerLeft{
 			border-right: 2px solid green;
 		}
-		.tagContainer{
-			
+		.tagContainer a{
+			 text-decoration-color: #bbb;
+			 color: #bbb;
 		}
+
+		.tagContainer{
+			 text-decoration-color: #bbb;
+			 color: #bbb;
+		}
+
 		.tagContainer .tag{
 			display: inline-block;
 		}
+
 
 	</style>
 	<script type="text/javascript">
@@ -77,5 +93,6 @@
 				<div class="linkSpacer"></div>
 			</div>
 	</div>
+	<div class="cardSpacerSection"></div>
 
 </Card>
