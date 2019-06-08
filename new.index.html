@@ -1,0 +1,112 @@
+<html>
+
+	<style>
+	/*Page styles*/
+		body {
+			margin: 0;
+			background-color: #eee
+		}
+		
+
+
+	</style>
+
+	
+
+	<!-- <div class="topRow row">
+		<div class="card">
+			<div class="cardText">text</div>
+			<div class="timelineLink">
+				<div class="linkSpacer linkSpacerLeft"></div>
+				<div class="linkSpacer"></div>
+			</div>
+		</div>
+		<div class="spacer"></div>
+		<div class="card">
+			<div class="cardText">text2</div>
+			<div class="timelineLink">|</div>
+		</div>
+	</div>
+	<div class="timeline">
+	</div>
+	<div class="bottomRow row">
+				<div class="spacer"></div>
+		<div class="card">
+			<div class="cardText">text3</div>
+			<div class="timelineLink">|</div>
+		</div>
+	</div> -->
+
+	<body>
+		<App is="App"></App>
+		<!-- <script type="text/javascript" src="main.js"></script> -->
+	</body>
+
+	<script type="text/javascript">
+		const items = [
+			{
+				date: "yesterday",
+				title: "SOME TEXT"
+			},
+			{
+				date: "Today",
+				title: "SOME TEXT"
+			},
+			{
+				date: "Tomorrow",
+				title: "SOME TEXT"
+			},
+			{
+				date: "Day After",
+				title: "SOME TEXT"
+			},
+			{
+				date: "Tomorrow x2",
+				title: "SOME TEXT"
+			},
+			{
+				date: "Day After x3",
+				title: "SOME TEXT",
+				tags: ["#video", "#news"]
+			},
+			{
+				date: "Day After x4",
+				title: "SOME TEXT",
+				tags: ["#video", "#news"]
+			},
+			// {
+			// 	date: "Day After x5",
+			// 	title: "SOME TEXT",
+			// 	tags: ["#video", "#news"]
+			// },
+			// {
+			// 	date: "Day After x6",
+			// 	title: "SOME TEXT",
+			// 	tags: ["#video", "#news"]
+			// },
+			// {
+			// 	date: "Day After x7",
+			// 	title: "SOME TEXT",
+			// 	tags: ["#video", "#news"]
+			// },
+			// {
+			// 	date: "Day After x8",
+			// 	title: "SOME TEXT",
+			// 	tags: ["#video", "#news"]
+			// },
+		];
+
+	</script>
+
+	<script type="riot/tag" src="./App.tag"></script>
+	<script type="riot/tag" src="./Card.tag"></script>
+	<script type="text/javascript" src="riot+compiler.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/riot-route@3.0.0/dist/route.min.js"></script>
+
+	<script type="text/javascript">
+		route.start(true)
+		riot.mount("App", {
+			cards: items
+		});
+	</script>
+</html>
