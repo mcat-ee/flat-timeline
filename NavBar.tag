@@ -15,7 +15,7 @@
 			margin: auto auto;
 			color:white;
 			text-align: center;
-			margin-top:35px;
+			font-size: 4em;
 		}
 
 		.container .navBarSpacer {
@@ -28,7 +28,7 @@
 	</style>
 
 	<div class="container">
-		<div class="collapseButton">SHOW INFO SCREEN</div>
+		<div class="collapseButton">ℹ</div>
 		<div class="navbarTitle"><h1>Example timeline!</h1></div>
 		<div class="navBarSpacer"></div>
 	</div>
