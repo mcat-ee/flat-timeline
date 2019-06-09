@@ -77,14 +77,16 @@
 				<div class="dateContainer">
 				{this.opts.date}
 				</div>
+				
+				<div class="titleContainer">
+				{this.opts.title}
+				</div>
+
 				<div class="tagContainer">
 					<div class="tag" each="{tag in this.opts.tags}">
 						<a href="#">{tag}</a>.
 					</div>
 
-				</div>
-				<div class="titleContainer">
-				{this.opts.title}
 				</div>
 			</div>
 
@@ -93,6 +95,6 @@
 				<div class="linkSpacer"></div>
 			</div>
 	</div>
-	<div class="cardSpacerSection"></div>
+	<!-- <div class="cardSpacerSection"></div> -->
 
 </Card>
