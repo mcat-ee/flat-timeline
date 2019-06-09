@@ -11,16 +11,16 @@
 
 		#soloRow > card:nth-of-type(odd) .card {
 			flex-direction: column-reverse;
-			border-top: solid 2px red;
+			/*border-top: solid 2px red;*/
 		}
 
 		#soloRow > card:nth-of-type(even) .card {
-			flex-direction: column;
-			border-bottom: solid 2px red;
+			flex-direction: column-reverse;
+			/*border-top: solid 2px red;*/
 		}
 
 		#soloRow > card:nth-of-type(odd)  {
-			flex-direction: column-reverse;
+			flex-direction: column;
 			display:flex;
 		}
 
@@ -35,7 +35,7 @@
 		}
 
 		#soloRow > card:nth-of-type(even) .card .contents {
-			flex-direction: column-reverse;
+			flex-direction: column;
 		}
 
 		#soloRow > card:first-of-type .card {
@@ -121,6 +121,12 @@
 			/*padding-left: 10px;*/
 						/*background-color: #eee;*/
 		}
+
+		.cardWrapper{
+			padding-left:25px;
+			padding-right:25px;
+			border-top: red solid 2px;
+		}
 	</style>
 <NavBar></NavBar>
 <div id="soloRow" class="row"></div>
@@ -181,6 +187,7 @@
 			// 	//Add spacer to bottomRow
 				var card = document.createElement("Card");
 				soloRowRef.appendChild(card);
+				card.className = "cardWrapper";
 
 			// 	topRowRef.appendChild(card)
 
