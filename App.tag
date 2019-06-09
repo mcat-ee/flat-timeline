@@ -52,11 +52,13 @@
 		}
 
 		#soloRow {
-			height:calc(100vh - 200px);
+			height:calc(30vh);
 			padding-top: 100px;
 			padding-bottom: 100px;
 			display:flex;
 			flex-direction:row;
+
+			overflow-x: scroll;
 				
 		}
 
@@ -127,8 +129,49 @@
 			padding-right:25px;
 			border-top: red solid 2px;
 		}
+
+		/*Panes*/
+		#paneView {
+			height:40vh;
+			width:100%;
+			background-color: #ddd;
+			display:flex;
+			flex-direction: row;
+		}
+
+		#paneView #mediaView {
+			flex:1;
+			background-color: black;
+		}
+
+		#paneView #descriptionView{
+			flex:1;
+			display:flex;
+			flex-direction: column;
+		}
+
+		#descriptionView .descriptionTitle{
+			text-decoration: underline;
+			font-size:1.5em;
+		}
+		#descriptionView .descriptionDate {
+			color:grey;
+		}
+		#descriptionView .descriptionText {
+			
+		}
 	</style>
 <NavBar></NavBar>
+<div id="paneView">
+	<div id="mediaView"></div>
+	<div id="descriptionView">
+		<div class="descriptionTitle">TITLE</div>
+		<div class="descriptionDate">DATE</div>
+		<div class="descriptionText">TEXT</div>
+		<div class="descriptionTags">TAGS</div>
+		
+	</div>
+</div>
 <div id="soloRow" class="row"></div>
 
 <!-- <div id="topRow" class="topRow row"> -->
