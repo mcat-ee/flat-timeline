@@ -80,6 +80,12 @@
 					}
 				],
 				tags: ["#project", "#nice", "#milestones"]
+			},
+			{
+				date: "9/6/19 - 9:09 PM",
+				title: "TESTING LONG POSTS",
+				text: "dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da dsadadad a dasda da ",
+				tags: ["#testing"]
 			}
 		];
 
@@ -89,10 +95,15 @@
 	<script type="riot/tag" src="./Card.tag"></script>
 	<script type="riot/tag" src="./NavBar.tag"></script>
 	<script type="text/javascript" src="riot+compiler.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/riot-route@3.0.0/dist/route.min.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/riot-route@3.0.0/dist/route.min.js"></script> -->
 
 	<script type="text/javascript">
-		route.start(true)
+		// route.start(true)
+		currentCard = {
+			date: "8/6/19 - 7:15 PM",
+				title: "Version 0.1 pushed to GitHub ",
+				tags: ["#project", "#nice", "#milestones"]
+		};
 		riot.mount("App", {
 			cards: items
 		});
