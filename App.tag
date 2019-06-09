@@ -148,27 +148,46 @@
 			flex:1;
 			display:flex;
 			flex-direction: column;
+			padding: 20px;
 		}
 
 		#descriptionView .descriptionTitle{
 			text-decoration: underline;
 			font-size:1.5em;
+			flex: 0.1;
 		}
 		#descriptionView .descriptionDate {
 			color:grey;
+			/*padding-top:10px;*/
+			flex: 0.1;
 		}
 		#descriptionView .descriptionText {
-			
+			/*padding-top:10px;*/
+			flex: 0.6;
+			overflow-y: auto;
+				
+		}
+
+		#descriptionView .descriptionTags{
+			/*padding-top:10px;*/
+			flex: 0.05;
 		}
 	</style>
 <NavBar></NavBar>
 <div id="paneView">
 	<div id="mediaView"></div>
 	<div id="descriptionView">
-		<div class="descriptionTitle">TITLE</div>
-		<div class="descriptionDate">DATE</div>
-		<div class="descriptionText">TEXT</div>
-		<div class="descriptionTags">TAGS</div>
+		<div class="descriptionTitle">{currentCard.title}</div>
+		<div class="descriptionDate">{currentCard.date}</div>
+		<div class="descriptionText">{currentCard.text}</div>
+		<div class="descriptionTags">
+				<div class="tagContainer">
+					<div class="tag" each="{tag in currentCard.tags}">
+						<a href="#">{tag}</a>.
+					</div>
+
+				</div>
+		</div>
 		
 	</div>
 </div>
@@ -210,6 +229,10 @@
  //    		this.state = "loading";
  //    		this.userModel = null;
 
+	 function clone(src) {
+	  return Object.assign({}, src);
+	}
+
  	const self = this;
  	this.on("mount", () => {
  		console.log("MOUNTING");
@@ -239,7 +262,7 @@
 			// 	bottomRowRef.appendChild(spacer);
 
 			// 	//Mount card
-
+				cardOpt['raw'] = clone(cardOpt);
 				riot.mount(card, cardOpt);
 
 			// } else {
