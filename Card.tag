@@ -1,4 +1,4 @@
-<Card>
+<Card ref="clickable">
 	<style type="text/css">
 		.card {
 			width:250px;
@@ -7,7 +7,6 @@
 			display: flex;
 			flex-direction: column;
 			flex:1;
-			
 		}
 
 		.cardSpacerSection{
@@ -16,13 +15,11 @@
 			height:50vh;
 		}
 		
-		
 		.card .timelineLink {
 			flex: 0.25;
 			display:flex;
 			flex-direction: row;
 			background-color: #eee;
-			/*border-top: 2px solid green;*/
 		}
 
 		.card .timelineLink .linkSpacer{
@@ -34,7 +31,6 @@
 			display: flex;
 			border: 2px solid green;
 			padding:20px;
-
 		}
 
 		.card .contents .dateContainer{
@@ -48,10 +44,10 @@
 			flex:1;
 		}
 
-
 		.linkSpacerLeft{
 			border-right: 2px solid green;
 		}
+
 		.tagContainer a{
 			 text-decoration-color: #bbb;
 			 color: #bbb;
@@ -65,11 +61,17 @@
 		.tagContainer .tag{
 			display: inline-block;
 		}
-
-
 	</style>
 	<script type="text/javascript">
-		
+	const self = this;
+ 	this.on("mount", () => {
+ 		this.raw = this.opts.raw;
+		this.refs.clickable.onclick = (e) => {
+			window.currentCard = this.raw;
+			//TODO: set currentCard highlighting
+    		riot.update();
+		};
+ 	});
 	</script>
 
 	<div class="card">
@@ -77,11 +79,9 @@
 				<div class="dateContainer">
 				{this.opts.date}
 				</div>
-				
 				<div class="titleContainer">
 				{this.opts.title}
 				</div>
-
 				<div class="tagContainer">
 					<div class="tag" each="{tag in this.opts.tags}">
 						<a href="#">{tag}</a>.
@@ -89,12 +89,9 @@
 
 				</div>
 			</div>
-
 			<div class="timelineLink">
 				<div class="linkSpacer linkSpacerLeft"></div>
 				<div class="linkSpacer"></div>
 			</div>
 	</div>
-	<!-- <div class="cardSpacerSection"></div> -->
-
 </Card>
